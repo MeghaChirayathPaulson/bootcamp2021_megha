@@ -1,21 +1,32 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-   @override
+import 'screens/screens/top_bar.dart';
+
+class HomepageScreen extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          height: 100,
-          width: 100,
-          color: Colors.amberAccent,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text('Data'),
-              Text('Data')
-            ],
-          ))));
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TopBar(
+              title: 'Megha Paulson',
+              subtitle: 'Developer',
+              color: Colors.black,
+            ),
+            const SizedBox(height: 10,),
+            Text(
+              'Photography',
+               style: TextStyle(
+                 fontSize: 22,
+                 color: Colors.blue,
+                 ),
+               )
+          ],
+        ),
+      ),
+    );
   }
 }
+
